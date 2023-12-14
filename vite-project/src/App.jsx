@@ -27,6 +27,9 @@ function App() {
     console.log("eth");
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://etherscan.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -37,6 +40,9 @@ function App() {
     console.log("arb");
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://arbiscan.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -46,6 +52,9 @@ function App() {
   function SearchBSC() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://bscscan.com/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -55,6 +64,9 @@ function App() {
   function SearchPolygon() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://polygonscan.com/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -64,6 +76,9 @@ function App() {
   function SearchAvalanche() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://avascan.info/blockchain/c/tx/${coinInput}`;
 
@@ -74,6 +89,9 @@ function App() {
   function SearchFantom() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://ftmscan.com/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -83,6 +101,9 @@ function App() {
   function SearchHeco() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://hecoscan.io/#/transaction/${coinInput}`;
 
@@ -93,6 +114,9 @@ function App() {
   function SearchOptimism() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://optimistic.etherscan.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -102,6 +126,9 @@ function App() {
   function SearchCronos() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://cronoscan.com/tx/${coinInput}`;
 
@@ -112,6 +139,9 @@ function App() {
   function SearchxDAI() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://gnosisscan.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -121,6 +151,9 @@ function App() {
   function SearchCardano() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://cardanoscan.io/transaction/${coinInput}`;
       window.open(url, "_blank");
@@ -130,6 +163,9 @@ function App() {
   function SearchTron() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://tronscan.org/#/transaction/${coinInput}`;
 
@@ -140,6 +176,9 @@ function App() {
   function SearchZksync() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://explorer.zksync.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -149,6 +188,9 @@ function App() {
   function SearchTomo() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://tomoscan.io/tx/${coinInput}`;
       window.open(url, "_blank");
@@ -158,6 +200,9 @@ function App() {
   function SearchBoba() {
     if (coinInput === "") {
       emptyString.classList.remove("hide");
+      setTimeout(() => {
+        emptyString.classList.add("hide");
+      }, 5000);
     } else {
       const url = `https://bobascan.com/tx/${coinInput}`;
       window.open(url, "_blank");
