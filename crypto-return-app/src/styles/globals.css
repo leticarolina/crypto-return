@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  background-color: lightcyan;
+  height: 40px;
+  font-size: 22px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+/* ul {
+  align-self: center;
+} */
+li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.address-finder {
+  float: right;
+}
+
+.tx {
+  margin-top: 60px;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.input-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.empty-input {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.hide {
+  visibility: hidden;
+}
+.all-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  margin: 10px;
+  padding: 10px;
+}
+
+.my-hello {
+  padding: 40px;
+  background: red;
+  color: white;
+}
