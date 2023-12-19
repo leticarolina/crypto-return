@@ -184,7 +184,7 @@ export default function AddressFinder() {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://explorer.zksync.io/tx/${address}`;
+      const url = `https://explorer.zksync.io/address/${address}`;
       window.open(url, "_blank");
     }
   }
@@ -196,19 +196,19 @@ export default function AddressFinder() {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://tomoscan.io/tx/${address}`;
+      const url = `https://tomoscan.io/address/${address}`;
       window.open(url, "_blank");
     }
   }
 
-  function SearchBoba() {
+  function SearchBitcoin() {
     if (address === "") {
       emptyString.classList.remove("hide");
       setTimeout(() => {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://bobascan.com/tx/${address}`;
+      const url = `https://www.blockchain.com/explorer/addresses/btc/${address}`;
       window.open(url, "_blank");
     }
   }
@@ -300,8 +300,8 @@ export default function AddressFinder() {
             Tomo Chain
           </button>
 
-          <button className="btn" onClick={SearchBoba}>
-            Boba
+          <button className="btn" onClick={SearchBitcoin}>
+            Bitcoin
           </button>
         </div>
       </div>

@@ -213,7 +213,9 @@ export default function Home() {
       window.open(url, "_blank");
     }
   }
-
+  function clear() {
+    setTxidInput("");
+  }
   // function SearchAll() {
   //   if (txidInput === "") return;
   //   const urls = [
@@ -245,19 +247,23 @@ export default function Home() {
         Network Adddress Finder
       </button> */}
       <div className="tx">
-        <label htmlFor="txid">
-          Input txID:
+        <label htmlFor="txid">Input txID here:</label>
+        <div className="input-center">
+          {" "}
           <input
             type="text"
             id="txid"
             value={txidInput}
             onChange={(e) => setTxidInput(e.target.value)}
           />
-        </label>
+          <button onClick={clear}>Clear</button>{" "}
+        </div>
         <p className="empty-input hide">
           Please provide a txID before searching.
         </p>
-
+        <p className="input-center">
+          Click on the desired network to search given txID:
+        </p>
         <div className="all-buttons">
           <button className="btn" onClick={SearchEth}>
             ETH
