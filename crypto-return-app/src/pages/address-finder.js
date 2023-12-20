@@ -229,11 +229,28 @@ export default function AddressFinder() {
           ))}
         </ul>
       </nav>
-      <Link href="/">Transaction Network Finder</Link>
+      <Link className="link" href="/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+          />
+        </svg>
+        Transaction Network Finder
+      </Link>
       {/* <button className="address-finder" onClick={openAddressFinder}>
       Network Adddress Finder
     </button> */}
       <div className="tx">
+        <p className="input-center">Step 1</p>
+
         <label htmlFor="txid">Input Address:</label>
         <div className="input-center">
           {" "}
@@ -249,60 +266,93 @@ export default function AddressFinder() {
         <p className="empty-input hide">
           Please provide an address before searching.
         </p>
+        <p className="input-center">Step 2</p>
+        <p className="input-center">
+          Click on the desired network to search given txID:
+        </p>
+        <div className="all-buttons container">
+          <div className="row d-flex text-center">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary " onClick={SearchEth}>
+                ETH
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchArbitrum}>
+                ARBITRUM
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchBSC}>
+                BSC
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchPolygon}>
+                Polygon
+              </button>
+            </div>
 
-        <div className="all-buttons">
-          <button className="btn" onClick={SearchEth}>
-            ETH
-          </button>
-          <button className="btn" onClick={SearchArbitrum}>
-            ARBITRUM
-          </button>
-          <button className="btn" onClick={SearchBSC}>
-            BSC
-          </button>
-          <button className="btn" onClick={SearchPolygon}>
-            Polygon
-          </button>
-          <button className="btn" onClick={SearchAvalanche}>
-            Avalanche
-          </button>
-          <button className="btn" onClick={SearchFantom}>
-            Fantom
-          </button>
-          <button className="btn" onClick={SearchHeco}>
-            Heco
-          </button>
-          <button className="btn" onClick={SearchOptimism}>
-            Optimism
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchAvalanche}>
+                Avalanche
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchCronos}>
-            Cronos
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchFantom}>
+                Fantom
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchHeco}>
+                Heco
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchOptimism}>
+                Optimism
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchxDAI}>
-            xDAI
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchCronos}>
+                Cronos
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchxDAI}>
+                xDAI
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchCardano}>
-            Cardano
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchCardano}>
+                Cardano
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchTron}>
-            TronSCAN
-          </button>
-
-          <button className="btn" onClick={SearchZksync}>
-            zkSync Era
-          </button>
-
-          <button className="btn" onClick={SearchTomo}>
-            Tomo Chain
-          </button>
-
-          <button className="btn" onClick={SearchBitcoin}>
-            Bitcoin
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchTron}>
+                TronSCAN
+              </button>
+            </div>
+            <div className="col">
+              <button className="btn btn-primary" onClick={SearchZksync}>
+                zkSync Era
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchTomo}>
+                Tomo Chain
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchBitcoin}>
+                Bitcoin
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

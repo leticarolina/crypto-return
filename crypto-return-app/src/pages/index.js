@@ -242,11 +242,27 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <Link href="/address-finder">Network Adddress Finder</Link>
+      <Link className="link" href="/address-finder">
+        Adddress Network Finder
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </Link>
       {/* <button className="address-finder" onClick={openAddressFinder}>
         Network Adddress Finder
       </button> */}
       <div className="tx">
+        <p className="input-center">Step 1</p>
         <label htmlFor="txid">Input txID here:</label>
         <div className="input-center">
           {" "}
@@ -261,62 +277,92 @@ export default function Home() {
         <p className="empty-input hide">
           Please provide a txID before searching.
         </p>
+        <p className="input-center">Step 2</p>
         <p className="input-center">
           Click on the desired network to search given txID:
         </p>
-        <div className="all-buttons">
-          <button className="btn" onClick={SearchEth}>
-            ETH
-          </button>
-          <button className="btn" onClick={SearchArbitrum}>
-            ARBITRUM
-          </button>
-          <button className="btn" onClick={SearchBSC}>
-            BSC
-          </button>
-          <button className="btn" onClick={SearchPolygon}>
-            Polygon
-          </button>
-          <button className="btn" onClick={SearchAvalanche}>
-            Avalanche
-          </button>
-          <button className="btn" onClick={SearchFantom}>
-            Fantom
-          </button>
-          <button className="btn" onClick={SearchHeco}>
-            Heco
-          </button>
-          <button className="btn" onClick={SearchOptimism}>
-            Optimism
-          </button>
+        <div className="all-buttons container">
+          <div className="row d-flex text-center">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary " onClick={SearchEth}>
+                ETH
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchArbitrum}>
+                ARBITRUM
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchBSC}>
+                BSC
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchPolygon}>
+                Polygon
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchCronos}>
-            Cronos
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchAvalanche}>
+                Avalanche
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchFantom}>
+                Fantom
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchHeco}>
+                Heco
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchOptimism}>
+                Optimism
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchCronos}>
+                Cronos
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchxDAI}>
+                xDAI
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchxDAI}>
-            xDAI
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchCardano}>
+                Cardano
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchCardano}>
-            Cardano
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchTron}>
+                TronSCAN
+              </button>
+            </div>
+            <div className="col">
+              <button className="btn btn-primary" onClick={SearchZksync}>
+                zkSync Era
+              </button>
+            </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchTomo}>
+                Tomo Chain
+              </button>
+            </div>
 
-          <button className="btn" onClick={SearchTron}>
-            TronSCAN
-          </button>
-
-          <button className="btn" onClick={SearchZksync}>
-            zkSync Era
-          </button>
-
-          <button className="btn" onClick={SearchTomo}>
-            Tomo Chain
-          </button>
-
-          <button className="btn" onClick={SearchBoba}>
-            Boba
-          </button>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn btn-primary" onClick={SearchBoba}>
+                Boba
+              </button>
+            </div>
+          </div>
 
           {/* <button className="btn" onClick={SearchAll}>
             Seach All
