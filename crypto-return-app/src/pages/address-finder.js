@@ -249,7 +249,7 @@ export default function AddressFinder() {
       Network Adddress Finder
     </button> */}
       <div className="tx">
-        <p className="input-center">Step 1</p>
+        <p className="input-center step">Step 1</p>
 
         <label htmlFor="txid">Input Address:</label>
         <div className="input-center">
@@ -266,7 +266,7 @@ export default function AddressFinder() {
         <p className="empty-input hide">
           Please provide an address before searching.
         </p>
-        <p className="input-center">Step 2</p>
+        <p className="input-center step">Step 2</p>
         <p className="input-center">
           Click on the desired network to search given txID:
         </p>

@@ -22,7 +22,7 @@ export default function Home() {
         setCoins(d.data);
       });
 
-    const scrollingNav = document.querySelector("nav");
+    const scrollingNav = document.querySelector("#coin");
     setInterval(() => {
       scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
     }, 30);
@@ -231,7 +231,7 @@ export default function Home() {
 
   return (
     <main>
-      <nav>
+      <nav id="coin">
         <ul>
           {coins.map(({ id, name, priceUsd }) => (
             <li key={id}>
@@ -242,46 +242,67 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <Link className="link" href="/address-finder">
-        Adddress Network Finder
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-arrow-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-          />
-        </svg>
-      </Link>
+      <nav className="head">
+        <h4 className="input-center">Transaction network Finder</h4>
+        <Link className="link" href="/address-finder">
+          Adddress Network Finder
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+            />
+          </svg>
+        </Link>
+      </nav>
+
       {/* <button className="address-finder" onClick={openAddressFinder}>
         Network Adddress Finder
       </button> */}
+
       <div className="tx">
-        <p className="input-center">Step 1</p>
-        <label htmlFor="txid">Input txID here:</label>
+        {" "}
+        <p className="input-center step">Step 1</p>
+        <label htmlFor="txid">Paste txID below:</label>
         <div className="input-center">
-          {" "}
+          {/* <div class="input-group w-50">
+            <div>
+              <span class="input-group-text" id="inputGroup">
+                txID
+              </span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
+            ></input>
+          </div> */}
           <input
+            className="input-group w-50"
             type="text"
             id="txid"
             value={txidInput}
             onChange={(e) => setTxidInput(e.target.value)}
           />
-          <button onClick={clear}>Clear</button>{" "}
+          <button onClick={clear} className="clear">
+            Clear
+          </button>{" "}
         </div>
         <p className="empty-input hide">
           Please provide a txID before searching.
         </p>
-        <p className="input-center">Step 2</p>
+        <p className="input-center step">Step 2</p>
         <p className="input-center">
           Click on the desired network to search given txID:
         </p>
-        <div className="all-buttons container">
+        <div className="all-buttons container-fluid">
           <div className="row d-flex text-center">
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary " onClick={SearchEth}>
@@ -329,11 +350,11 @@ export default function Home() {
                 Cronos
               </button>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchxDAI}>
                 xDAI
               </button>
-            </div>
+            </div> */}
 
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchCardano}>
@@ -346,12 +367,12 @@ export default function Home() {
                 TronSCAN
               </button>
             </div>
-            <div className="col">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchZksync}>
                 zkSync Era
               </button>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchTomo}>
                 Tomo Chain
               </button>
@@ -361,7 +382,7 @@ export default function Home() {
               <button className="btn btn-primary" onClick={SearchBoba}>
                 Boba
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* <button className="btn" onClick={SearchAll}>
