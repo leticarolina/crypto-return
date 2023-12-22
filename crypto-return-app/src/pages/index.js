@@ -216,21 +216,10 @@ export default function Home() {
   function clear() {
     setTxidInput("");
   }
-  // function SearchAll() {
-  //   if (txidInput === "") return;
-  //   const urls = [
-  //     `https://etherscan.io/tx/${txidInput}`,
-  //     `https://arbiscan.io/tx/${txidInput}`,
-  //     // `https://bscscan.com/tx/${txidInput}`,
-  //   ];
-  //   urls.forEach((url) => {
-  //     console.log(url);
-  //     window.open(url, "_blank");
-  //   });
-  // }
 
   return (
     <main>
+      {/* API Return */}
       <nav id="coin">
         <ul>
           {coins.map(({ id, name, priceUsd }) => (
@@ -242,6 +231,8 @@ export default function Home() {
           ))}
         </ul>
       </nav>
+
+      {/* Header + Input */}
       <nav className="head">
         <h4 className="input-center">Transaction network Finder</h4>
         <Link className="link" href="/address-finder">
@@ -251,7 +242,7 @@ export default function Home() {
             width="20"
             height="20"
             fill="currentColor"
-            class="bi bi-arrow-right"
+            className="bi bi-arrow-right"
             viewBox="0 0 16 16"
           >
             <path
@@ -261,29 +252,10 @@ export default function Home() {
           </svg>
         </Link>
       </nav>
-
-      {/* <button className="address-finder" onClick={openAddressFinder}>
-        Network Adddress Finder
-      </button> */}
-
       <div className="tx">
-        {" "}
         <p className="input-center step">Step 1</p>
         <label htmlFor="txid">Paste txID below:</label>
         <div className="input-center">
-          {/* <div class="input-group w-50">
-            <div>
-              <span class="input-group-text" id="inputGroup">
-                txID
-              </span>
-            </div>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Default"
-              aria-describedby="inputGroup-sizing-default"
-            ></input>
-          </div> */}
           <input
             className="input-group w-50"
             type="text"
@@ -302,6 +274,8 @@ export default function Home() {
         <p className="input-center">
           Click on the desired network to search given txID:
         </p>
+
+        {/* All buttons */}
         <div className="all-buttons container-fluid">
           <div className="row d-flex text-center">
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
@@ -350,11 +324,11 @@ export default function Home() {
                 Cronos
               </button>
             </div>
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchxDAI}>
                 xDAI
               </button>
-            </div> */}
+            </div>
 
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchCardano}>
@@ -367,27 +341,23 @@ export default function Home() {
                 TronSCAN
               </button>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn btn-primary" onClick={SearchZksync}>
                 zkSync Era
               </button>
             </div>
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn btn-primary" onClick={SearchTomo}>
                 Tomo Chain
               </button>
             </div>
 
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn btn-primary" onClick={SearchBoba}>
                 Boba
               </button>
-            </div> */}
+            </div>
           </div>
-
-          {/* <button className="btn" onClick={SearchAll}>
-            Seach All
-          </button> */}
         </div>
       </div>
     </main>

@@ -10,7 +10,7 @@ body {
   color: #a09e9e;
   height: 50px;
   font-size: 18px;
-  /* margin-bottom: 10px; */
+
   overflow-x: hidden;
   white-space: nowrap;
 }
@@ -22,9 +22,7 @@ body {
 }
 .link {
   color: #204969;
-
   font-size: 18px;
-  /* margin-right: 20px; */
   text-decoration: none;
 }
 
@@ -32,9 +30,7 @@ body {
 .bi-arrow-left {
   margin: 4px;
 }
-/* ul {
-  align-self: center;
-} */
+
 li {
   display: inline;
   margin-right: 10px;
@@ -82,17 +78,14 @@ label {
   display: flex;
   justify-content: center;
   color: red;
+  margin-top: 10px;
 }
-
 .hide {
   visibility: hidden;
 }
 .all-buttons {
-  /* display: flex; */
-
   justify-content: center;
   width: 50%;
-  /* flex-wrap: wrap; */
 }
 .btn {
   margin: 5px;
