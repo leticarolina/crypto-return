@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  /* background-color: #113a5d; */
 }
 
 #coin {
@@ -10,7 +11,6 @@ body {
   color: #a09e9e;
   height: 50px;
   font-size: 18px;
-
   overflow-x: hidden;
   white-space: nowrap;
 }
@@ -41,24 +41,36 @@ li {
   float: right;
 }
 
+.instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .step {
   color: #dadada;
   font-size: 30px;
 }
 
-.input-group {
+.input {
   border-radius: 20px;
-  border-color: #08ffc8;
+  border: 2px solid #b1dcd9;
   height: 40px;
+  padding: 15px;
 }
 
 .clear {
-  background-color: #edfff5;
+  /* background-color: #edfff5; */
+  background-color: #b1dcd9;
   margin-left: 10px;
   width: 100px;
   border-radius: 20px;
-  border-color: #08ffc8;
+  border: 1px solid #b1dcd9;
   height: 40px;
+  color: #062743;
+}
+
+.clear:hover {
+  background-color: #e5f2f2;
 }
 .tx {
   margin-top: 30px;
@@ -74,6 +86,7 @@ label {
   display: flex;
   justify-content: center;
 }
+
 .empty-input {
   display: flex;
   justify-content: center;
@@ -93,4 +106,21 @@ label {
   width: 150px;
   height: 100px;
   border-radius: 20px;
+  /* background-color: #ebf5ef; */
+  background-color: #d2e5e4;
+  /* border: 1px solid #062743; */
+
+  color: #062743;
 }
+.btn:hover {
+  background-color: #b1dcd9;
+  border: 1px solid #b1dcd9;
+  color: #062743;
+}
+
+.new-tab {
+  color: brown;
+}
+/* .button-inner {
+  display: block;
+} */

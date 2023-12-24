@@ -251,9 +251,6 @@ export default function AddressFinder() {
         </Link>
       </nav>
 
-      {/* <button className="address-finder" onClick={openAddressFinder}>
-      Network Adddress Finder
-    </button> */}
       <div className="tx">
         <p className="input-center step">Step 1</p>
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [txidInput, setTxidInput] = useState("");
@@ -253,11 +254,14 @@ export default function Home() {
         </Link>
       </nav>
       <div className="tx">
-        <p className="input-center step">Step 1</p>
-        <label htmlFor="txid">Paste txID below:</label>
+        <div className="instructions">
+          <p className="input-center step">01.</p>
+          <label htmlFor="txid">Paste txID below</label>
+        </div>
+
         <div className="input-center">
           <input
-            className="input-group w-50"
+            className="input w-50"
             type="text"
             id="txid"
             value={txidInput}
@@ -270,93 +274,215 @@ export default function Home() {
         <p className="empty-input hide">
           Please provide a txID before searching.
         </p>
-        <p className="input-center step">Step 2</p>
-        <p className="input-center">
-          Click on the desired network to search given txID:
-        </p>
+        <div className="instructions">
+          <p className="input-center step">02.</p>
+          <p className="input-center">
+            Click on the desired network to search given txID:
+          </p>
+        </div>
 
         {/* All buttons */}
         <div className="all-buttons container-fluid">
           <div className="row d-flex text-center">
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary " onClick={SearchEth}>
-                ETH
+              <button className="btn  " onClick={SearchEth}>
+                <span>Ethereum</span>{" "}
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchArbitrum}>
-                ARBITRUM
+              <button className="btn " onClick={SearchArbitrum}>
+                <span>Arbitrum</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchBSC}>
-                BSC
+              <button className="btn " onClick={SearchBSC}>
+                <span>BSC</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchPolygon}>
-                Polygon
+              <button className="btn " onClick={SearchPolygon}>
+                <span>Polygon</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
 
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchAvalanche}>
-                Avalanche
+              <button className="btn " onClick={SearchAvalanche}>
+                <span>Avalanche</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchFantom}>
-                Fantom
+              <button className="btn " onClick={SearchFantom}>
+                <span>Fantom</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchHeco}>
-                Heco
+              <button className="btn " onClick={SearchHeco}>
+                <span>Heco</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchOptimism}>
-                Optimism
+              <button className="btn " onClick={SearchOptimism}>
+                <span>Optimism</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchCronos}>
-                Cronos
+              <button className="btn " onClick={SearchCronos}>
+                <span>Cronos</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn btn-primary" onClick={SearchxDAI}>
-                xDAI
+                <span>xDAI</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
+              </button>
+            </div> */}
+
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn " onClick={SearchCardano}>
+                <span>Cardano</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
 
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchCardano}>
-                Cardano
+              <button className="btn " onClick={SearchTron}>
+                <span>TRON</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
-
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchTron}>
-                TronSCAN
+              <button className="btn " onClick={SearchZksync}>
+                <span>ZkSync Era</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
-              <button className="btn btn-primary" onClick={SearchZksync}>
-                zkSync Era
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn btn-primary" onClick={SearchTomo}>
-                Tomo Chain
+                <span>Tomo Chain</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
-            </div>
+            </div> */}
 
-            <div className="col-6 col-sm-6 col-md-4 col-lg-4">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn btn-primary" onClick={SearchBoba}>
-                Boba
+                <span>Boba Chain</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
