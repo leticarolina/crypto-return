@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   const [txidInput, setTxidInput] = useState("");
   const [coins, setCoins] = useState([]);
+  const [error, setError] = useState();
   // const emptyString = document.querySelector(".empty-input");
 
   let emptyString;
@@ -21,6 +23,10 @@ export default function Home() {
       .then((d) => {
         console.log(d);
         setCoins(d.data);
+      })
+      .catch((err) => {
+        setError(err);
+        console.error("error occured");
       });
 
     const scrollingNav = document.querySelector("#coin");
@@ -142,14 +148,14 @@ export default function Home() {
     }
   }
 
-  function SearchxDAI() {
+  function SearchKlay() {
     if (txidInput === "") {
       emptyString.classList.remove("hide");
       setTimeout(() => {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://gnosisscan.io/tx/${txidInput}`;
+      const url = `https://klaytnscope.com/tx/${txidInput}`;
       window.open(url, "_blank");
     }
   }
@@ -191,26 +197,26 @@ export default function Home() {
     }
   }
 
-  function SearchTomo() {
+  function SearchKCC() {
     if (txidInput === "") {
       emptyString.classList.remove("hide");
       setTimeout(() => {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://tomoscan.io/tx/${txidInput}`;
+      const url = `https://explorer.kcc.io/en/tx/${txidInput}`;
       window.open(url, "_blank");
     }
   }
 
-  function SearchBoba() {
+  function SearchBitcoin() {
     if (txidInput === "") {
       emptyString.classList.remove("hide");
       setTimeout(() => {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://bobascan.com/tx/${txidInput}`;
+      const url = `https://www.blockchain.com/explorer/transactions/btc/${txidInput}`;
       window.open(url, "_blank");
     }
   }
@@ -227,17 +233,17 @@ export default function Home() {
             <li key={id}>
               <span>{name}</span>
               <span> ${parseFloat(priceUsd).toFixed(2)}</span>
-              <span> |</span>
+              <span className="spacer"> |</span>
             </li>
           ))}
         </ul>
       </nav>
 
-      {/* Header + Input */}
+      {/* Header */}
       <nav className="head">
-        <h4 className="input-center">Transaction network Finder</h4>
-        <Link className="link" href="/address-finder">
-          Adddress Network Finder
+        <h4 className="input-center title">Transaction network Finder</h4>
+        <Link className="link " href="/address-finder">
+          Visit Address Network Finder
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -255,12 +261,14 @@ export default function Home() {
       </nav>
       <div className="tx">
         <div className="instructions">
-          <p className="input-center step">01.</p>
-          <label htmlFor="txid">Paste txID below</label>
+          <p className="input-center step">01. </p>
+          <label htmlFor="txid">Paste 0x hash below</label>
         </div>
 
+        {/* TXID Input */}
         <div className="input-center">
           <input
+            placeholder="Paste 0x txID here..."
             className="input w-50"
             type="text"
             id="txid"
@@ -275,9 +283,9 @@ export default function Home() {
           Please provide a txID before searching.
         </p>
         <div className="instructions">
-          <p className="input-center step">02.</p>
+          <p className="input-center step">02. </p>
           <p className="input-center">
-            Click on the desired network to search given txID:
+            Click on the desired network to search given txID
           </p>
         </div>
 
@@ -286,7 +294,7 @@ export default function Home() {
           <div className="row d-flex text-center">
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn  " onClick={SearchEth}>
-                <span>Ethereum</span>{" "}
+                <span className="coin">Ethereum</span>{" "}
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -299,7 +307,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchArbitrum}>
-                <span>Arbitrum</span>
+                <span className="coin">Arbitrum</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -312,7 +320,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchBSC}>
-                <span>BSC</span>
+                <span className="coin">BSC</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -325,7 +333,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchPolygon}>
-                <span>Polygon</span>
+                <span className="coin">Polygon</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -339,7 +347,7 @@ export default function Home() {
 
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchAvalanche}>
-                <span>Avalanche</span>
+                <span className="coin">Avalanche</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -352,7 +360,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchFantom}>
-                <span>Fantom</span>
+                <span className="coin"> Fantom</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -365,7 +373,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchHeco}>
-                <span>Heco</span>
+                <span className="coin">Heco</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -378,7 +386,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchOptimism}>
-                <span>Optimism</span>
+                <span className="coin">Optimism</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -391,7 +399,7 @@ export default function Home() {
             </div>
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchCronos}>
-                <span>Cronos</span>
+                <span className="coin">Cronos</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -402,9 +410,23 @@ export default function Home() {
                 </div>
               </button>
             </div>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn" onClick={SearchKlay}>
+                <span>Klay</span>
+                <div className="button-inner">
+                  <Image
+                    className="new-tab"
+                    src={"/newTab.svg"}
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
+              </button>
+            </div>
+
             {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn btn-primary" onClick={SearchxDAI}>
-                <span>xDAI</span>
+              <button className="btn " onClick={SearchCardano}>
+                <span className="coin">Cardano</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -416,23 +438,9 @@ export default function Home() {
               </button>
             </div> */}
 
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchCardano}>
-                <span>Cardano</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchTron}>
-                <span>TRON</span>
+                <span className="coin">TRON</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -442,10 +450,10 @@ export default function Home() {
                   ></Image>
                 </div>
               </button>
-            </div>
+            </div> */}
             <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchZksync}>
-                <span>ZkSync Era</span>
+                <span className="coin">ZkSync Era</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -456,9 +464,9 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
-              <button className="btn btn-primary" onClick={SearchTomo}>
-                <span>Tomo Chain</span>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+              <button className="btn " onClick={SearchKCC}>
+                <span>KCC Explorer</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -468,11 +476,11 @@ export default function Home() {
                   ></Image>
                 </div>
               </button>
-            </div> */}
+            </div>
 
             {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
-              <button className="btn btn-primary" onClick={SearchBoba}>
-                <span>Boba Chain</span>
+              <button className="btn " onClick={SearchBitcoin}>
+                <span>Bitcoin</span>
                 <div className="button-inner">
                   <Image
                     className="new-tab"
@@ -486,6 +494,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <footer>
+        Copyright © 2023{" "}
+        <a href="https://www.letiazevedo.com/" className="my-site">
+          Leticia Azevedo
+        </a>
+        . All Rights Reserved.
+      </footer>
     </main>
   );
 }
