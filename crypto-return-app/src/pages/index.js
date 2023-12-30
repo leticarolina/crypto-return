@@ -7,7 +7,6 @@ export default function Home() {
   const [txidInput, setTxidInput] = useState("");
   const [coins, setCoins] = useState([]);
   const [error, setError] = useState();
-  // const emptyString = document.querySelector(".empty-input");
 
   let emptyString;
 
@@ -85,14 +84,14 @@ export default function Home() {
     }
   }
 
-  function SearchAvalanche() {
+  function SearchSnow() {
     if (txidInput === "") {
       emptyString.classList.remove("hide");
       setTimeout(() => {
         emptyString.classList.add("hide");
       }, 5000);
     } else {
-      const url = `https://avascan.info/blockchain/c/tx/${txidInput}`;
+      const url = `https://snowtrace.io/tx/${txidInput}`;
 
       window.open(url, "_blank");
     }
@@ -160,30 +159,30 @@ export default function Home() {
     }
   }
 
-  function SearchCardano() {
-    if (txidInput === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://cardanoscan.io/transaction/${txidInput}`;
-      window.open(url, "_blank");
-    }
-  }
+  // function SearchCardano() {
+  //   if (txidInput === "") {
+  //     emptyString.classList.remove("hide");
+  //     setTimeout(() => {
+  //       emptyString.classList.add("hide");
+  //     }, 5000);
+  //   } else {
+  //     const url = `https://cardanoscan.io/transaction/${txidInput}`;
+  //     window.open(url, "_blank");
+  //   }
+  // }
 
-  function SearchTron() {
-    if (txidInput === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://tronscan.org/#/transaction/${txidInput}`;
+  // function SearchTron() {
+  //   if (txidInput === "") {
+  //     emptyString.classList.remove("hide");
+  //     setTimeout(() => {
+  //       emptyString.classList.add("hide");
+  //     }, 5000);
+  //   } else {
+  //     const url = `https://tronscan.org/#/transaction/${txidInput}`;
 
-      window.open(url, "_blank");
-    }
-  }
+  //     window.open(url, "_blank");
+  //   }
+  // }
 
   function SearchZksync() {
     if (txidInput === "") {
@@ -209,17 +208,17 @@ export default function Home() {
     }
   }
 
-  function SearchBitcoin() {
-    if (txidInput === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://www.blockchain.com/explorer/transactions/btc/${txidInput}`;
-      window.open(url, "_blank");
-    }
-  }
+  // function SearchBitcoin() {
+  //   if (txidInput === "") {
+  //     emptyString.classList.remove("hide");
+  //     setTimeout(() => {
+  //       emptyString.classList.add("hide");
+  //     }, 5000);
+  //   } else {
+  //     const url = `https://www.blockchain.com/explorer/transactions/btc/${txidInput}`;
+  //     window.open(url, "_blank");
+  //   }
+  // }
   function clear() {
     setTxidInput("");
   }
@@ -288,143 +287,108 @@ export default function Home() {
             Click on the desired network to search given txID
           </p>
         </div>
+      </div>
+      {/* All buttons */}
+      <div className="all-buttons container-fluid">
+        <div className=" row d-flex text-center">
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn  " onClick={SearchEth}>
+              <Image src={"/eth.svg"} width={20} height={20}></Image>
+              <span className="coin">Ethereum</span>
+              <div className="button-inner">
+                <Image
+                  className="new-tab"
+                  src={"/newTab.svg"}
+                  width={20}
+                  height={20}
+                ></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchArbitrum}>
+              <Image src={"/arbitrum.svg"} width={20} height={20}></Image>
+              <span className="coin">Arbitrum</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchBSC}>
+              <Image src={"/bsc.svg"} width={20} height={20}></Image>
+              <span className="coin">BSC</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchPolygon}>
+              <Image src={"/matic.svg"} width={20} height={20}></Image>
+              <span className="coin"> Polygon</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
 
-        {/* All buttons */}
-        <div className="all-buttons container-fluid">
-          <div className="row d-flex text-center">
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn  " onClick={SearchEth}>
-                <span className="coin">Ethereum</span>{" "}
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchArbitrum}>
-                <span className="coin">Arbitrum</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchBSC}>
-                <span className="coin">BSC</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchPolygon}>
-                <span className="coin">Polygon</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchSnow}>
+              <Image src={"/avax.svg"} width={20} height={20}></Image>
+              <span className="coin">Snowtrace</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchFantom}>
+              <Image src={"/fantom.svg"} width={20} height={20}></Image>
+              <span className="coin"> Fantom</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchHeco}>
+              <Image src={"/heco.svg"} width={20} height={20}></Image>
+              <span className="coin">Heco</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchOptimism}>
+              <Image src={"/optimism.svg"} width={20} height={20}></Image>
+              <span className="coin">Optimism</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchCronos}>
+              <Image src={"/cronoss.svg"} width={20} height={20}></Image>
+              <span className="coin">Cronos</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn" onClick={SearchKlay}>
+              <Image src={"/klay.svg"} width={20} height={20}></Image>
+              <span className="coin">Klay</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
 
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchAvalanche}>
-                <span className="coin">Avalanche</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchFantom}>
-                <span className="coin"> Fantom</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchHeco}>
-                <span className="coin">Heco</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchOptimism}>
-                <span className="coin">Optimism</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchCronos}>
-                <span className="coin">Cronos</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn" onClick={SearchKlay}>
-                <span>Klay</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchCardano}>
                 <span className="coin">Cardano</span>
                 <div className="button-inner">
@@ -438,7 +402,7 @@ export default function Home() {
               </button>
             </div> */}
 
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
               <button className="btn " onClick={SearchTron}>
                 <span className="coin">TRON</span>
                 <div className="button-inner">
@@ -451,34 +415,26 @@ export default function Home() {
                 </div>
               </button>
             </div> */}
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchZksync}>
-                <span className="coin">ZkSync Era</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchKCC}>
-                <span>KCC Explorer</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchZksync}>
+              <Image src={"/zksync.svg"} width={20} height={20}></Image>
+              <span className="coin">ZkSync Era</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            <button className="btn " onClick={SearchKCC}>
+              <Image src={"/kucoin.svg"} width={20} height={20}></Image>
+              <span className="coin">KCC</span>
+              <div className="button-inner">
+                <Image src={"/newTab.svg"} width={20} height={20}></Image>
+              </div>
+            </button>
+          </div>
 
-            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
+          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
               <button className="btn " onClick={SearchBitcoin}>
                 <span>Bitcoin</span>
                 <div className="button-inner">
@@ -491,9 +447,9 @@ export default function Home() {
                 </div>
               </button>
             </div> */}
-          </div>
         </div>
       </div>
+
       <footer>
         Copyright © 2023{" "}
         <a href="https://www.letiazevedo.com/" className="my-site">

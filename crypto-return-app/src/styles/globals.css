@@ -5,7 +5,7 @@ html,
 body {
   height: 100%;
   font-family: var("--font-roboto");
-  margin: 0;
+  margin: 0px;
   padding: 0;
   /* background-color: #f9f9f9; */
   /* background-color: #113a5d; */
@@ -112,7 +112,7 @@ input::placeholder {
 label {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .input-center {
@@ -131,16 +131,20 @@ label {
   visibility: hidden;
 }
 .all-buttons {
-  justify-content: center;
+  margin: 0px auto;
   width: 60%;
+  display: flex;
+  justify-content: center;
   /* gap: 20px; */
   /* text-align: center; */
 }
+
 .btn {
-  margin: 5px;
-  padding: 10px;
-  width: 150px;
-  height: 100px;
+  margin: 5px 5px;
+  /* padding: 10px; */
+  width: 120px;
+  /* max-width: 150px; */
+  height: 110px;
   border-radius: 20px;
   /* background-color: #fff7f7; */
   border-color: #08ffc8;
@@ -156,6 +160,9 @@ label {
   background-color: rgba(41, 188, 90, 0.4);
 }
 
+.coin {
+  display: block;
+}
 /* .button-inner {
   display: block;
 } */
@@ -174,6 +181,37 @@ footer {
 }
 .my-site:hover {
   color: #08ffc8;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .head {
+    display: block;
+
+    margin: 0px 10px 0px 0px;
+  }
+  .title {
+    font-size: 20px;
+    padding-bottom: 20px;
+    /* justify-content: center; */
+  }
+  .link {
+    font-size: 12px;
+    float: right;
+  }
+  .instructions {
+    justify-content: center;
+    font-size: 18px;
+    margin: 0px 30px 0px 50px;
+  }
+  .all-buttons {
+    width: 80%;
+  }
+  .empty-input {
+    font-size: 14px;
+  }
 }
 
 /* Transaction Address Finder colors */
