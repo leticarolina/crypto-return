@@ -4,16 +4,34 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Preconnect for Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-
-        {/* Link tag to import the Google Fonts */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&family=Play:wght@400;700&family=Roboto+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        {/* Other head elements */}
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon_package/apple-touch-icon.png"
+        ></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon_package/favicon-32x32.png"
+        ></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon_package/favicon-16x16.png"
+        ></link>
+        <link rel="manifest" href="/favicon_package/site.webmanifest"></link>
+        <link
+          rel="mask-icon"
+          href="/favicon_package/safari-pinned-tab.svg"
+          color="#5bbad5"
+        ></link>
+        <meta name="msapplication-TileColor" content="#da532c"></meta>
+        <meta name="theme-color" content="#ffffff"></meta>
+        {/* Document title */}
+        <title>Blockchain Network Finder</title>
+        <meta name="description"></meta>
       </Head>
       <body>
         <Main />

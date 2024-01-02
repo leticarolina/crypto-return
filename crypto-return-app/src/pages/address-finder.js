@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Head from "next/head";
+
 export default function AddressFinder() {
   const [address, setAddress] = useState("");
   const [coins, setCoins] = useState([]);
@@ -140,18 +142,6 @@ export default function AddressFinder() {
     }
   }
 
-  function SearchxDAI() {
-    if (address === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://gnosisscan.io/address/${address}`;
-      window.open(url, "_blank");
-    }
-  }
-
   function SearchCardano() {
     if (address === "") {
       emptyString.classList.remove("hide");
@@ -177,30 +167,6 @@ export default function AddressFinder() {
     }
   }
 
-  function SearchZksync() {
-    if (address === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://explorer.zksync.io/address/${address}`;
-      window.open(url, "_blank");
-    }
-  }
-
-  function SearchTomo() {
-    if (address === "") {
-      emptyString.classList.remove("hide");
-      setTimeout(() => {
-        emptyString.classList.add("hide");
-      }, 5000);
-    } else {
-      const url = `https://tomoscan.io/address/${address}`;
-      window.open(url, "_blank");
-    }
-  }
-
   function SearchBitcoin() {
     if (address === "") {
       emptyString.classList.remove("hide");
@@ -216,9 +182,13 @@ export default function AddressFinder() {
   function clear() {
     setAddress("");
   }
+
   return (
     <main>
-      {/* API Return */}
+      <Head>
+        <title>Address Network Finder</title>
+      </Head>
+      {/* nav bar API Return */}
       <nav id="coin">
         <ul>
           {coins.map(({ id, name, priceUsd }) => (
@@ -230,6 +200,7 @@ export default function AddressFinder() {
           ))}
         </ul>
       </nav>
+
       {/* Header */}
       <nav className="head">
         <h4 className="input-center title purp">Transaction Address Finder</h4>
@@ -251,13 +222,12 @@ export default function AddressFinder() {
         </Link>
       </nav>
 
+      {/* instructions + Address Input */}
       <div className="tx">
         <div className="instructions">
           <p className="input-center step light">01. </p>
           <label htmlFor="txid">Paste address below</label>
         </div>
-
-        {/* Address Input */}
         <div className="input-center">
           <input
             placeholder="Paste address here..."
@@ -281,7 +251,8 @@ export default function AddressFinder() {
           </p>
         </div>
       </div>
-      {/* All buttons */}
+
+      {/* All search buttons */}
       <div className="all-buttons container">
         <div className="row d-flex text-center">
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
@@ -339,7 +310,7 @@ export default function AddressFinder() {
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchAvalanche}>
               <Image src={"/avax.svg"} width={20} height={20}></Image>
-              <span className="coin">Avalanche</span>{" "}
+              <span className="coin">Snowtrace</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
@@ -445,6 +416,7 @@ export default function AddressFinder() {
         </div>
       </div>
 
+      {/* Footer */}
       <footer>
         Copyright © 2023{" "}
         <a href="https://www.letiazevedo.com/" className="my-site">

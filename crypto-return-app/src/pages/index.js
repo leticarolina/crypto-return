@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,7 +25,7 @@ export default function Home() {
       })
       .catch((err) => {
         setError(err);
-        console.error("error occured");
+        console.error("error to fetch API");
       });
 
     const scrollingNav = document.querySelector("#coin");
@@ -159,31 +159,6 @@ export default function Home() {
     }
   }
 
-  // function SearchCardano() {
-  //   if (txidInput === "") {
-  //     emptyString.classList.remove("hide");
-  //     setTimeout(() => {
-  //       emptyString.classList.add("hide");
-  //     }, 5000);
-  //   } else {
-  //     const url = `https://cardanoscan.io/transaction/${txidInput}`;
-  //     window.open(url, "_blank");
-  //   }
-  // }
-
-  // function SearchTron() {
-  //   if (txidInput === "") {
-  //     emptyString.classList.remove("hide");
-  //     setTimeout(() => {
-  //       emptyString.classList.add("hide");
-  //     }, 5000);
-  //   } else {
-  //     const url = `https://tronscan.org/#/transaction/${txidInput}`;
-
-  //     window.open(url, "_blank");
-  //   }
-  // }
-
   function SearchZksync() {
     if (txidInput === "") {
       emptyString.classList.remove("hide");
@@ -208,24 +183,17 @@ export default function Home() {
     }
   }
 
-  // function SearchBitcoin() {
-  //   if (txidInput === "") {
-  //     emptyString.classList.remove("hide");
-  //     setTimeout(() => {
-  //       emptyString.classList.add("hide");
-  //     }, 5000);
-  //   } else {
-  //     const url = `https://www.blockchain.com/explorer/transactions/btc/${txidInput}`;
-  //     window.open(url, "_blank");
-  //   }
-  // }
   function clear() {
     setTxidInput("");
   }
 
   return (
     <main>
-      {/* API Return */}
+      {" "}
+      <Head>
+        <title>txID Network Finder</title>
+      </Head>
+      {/* nav bar API Return */}
       <nav id="coin">
         <ul>
           {coins.map(({ id, name, priceUsd }) => (
@@ -237,10 +205,9 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-
       {/* Header */}
       <nav className="head">
-        <h4 className="input-center title">Transaction network Finder</h4>
+        <h4 className="input-center title">Transaction ID network Finder</h4>
         <Link className="link " href="/address-finder">
           Visit Address Network Finder
           <svg
@@ -258,13 +225,12 @@ export default function Home() {
           </svg>
         </Link>
       </nav>
+      {/* instructions + TXID Input */}
       <div className="tx">
         <div className="instructions">
           <p className="input-center step">01. </p>
           <label htmlFor="txid">Paste 0x hash below</label>
         </div>
-
-        {/* TXID Input */}
         <div className="input-center">
           <input
             placeholder="Paste 0x txID here..."
@@ -387,34 +353,6 @@ export default function Home() {
               </div>
             </button>
           </div>
-
-          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchCardano}>
-                <span className="coin">Cardano</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div> */}
-
-          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-              <button className="btn " onClick={SearchTron}>
-                <span className="coin">TRON</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div> */}
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn " onClick={SearchZksync}>
               <Image src={"/zksync.svg"} width={20} height={20}></Image>
@@ -433,23 +371,9 @@ export default function Home() {
               </div>
             </button>
           </div>
-
-          {/* <div className="col-6 col-sm-6 col-md-4 col-lg-4">
-              <button className="btn " onClick={SearchBitcoin}>
-                <span>Bitcoin</span>
-                <div className="button-inner">
-                  <Image
-                    className="new-tab"
-                    src={"/newTab.svg"}
-                    width={20}
-                    height={20}
-                  ></Image>
-                </div>
-              </button>
-            </div> */}
         </div>
       </div>
-
+      {/* Footer */}
       <footer>
         Copyright © 2023{" "}
         <a href="https://www.letiazevedo.com/" className="my-site">
