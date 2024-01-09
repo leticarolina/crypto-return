@@ -1,0 +1,19 @@
+{
+  "name": "crypto-return",
+  "version": "1.0.0",
+  "description": "TxID Network Finder is a personal project being developed to facilitate finding the relevant network of a given txID.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

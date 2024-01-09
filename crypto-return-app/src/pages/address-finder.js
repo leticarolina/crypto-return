@@ -257,10 +257,16 @@ export default function AddressFinder() {
         <div className="row d-flex text-center">
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl " onClick={SearchEth}>
-              <Image src={"/eth.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/eth.svg"}
+                width={20}
+                height={20}
+                alt="Ethereum logo"
+              ></Image>
               <span className="coin">Ethereum</span>{" "}
               <div className="button-inner">
                 <Image
+                  alt="New tab"
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
@@ -270,10 +276,16 @@ export default function AddressFinder() {
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchArbitrum}>
-              <Image src={"/arbitrum.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/arbitrum.svg"}
+                width={20}
+                height={20}
+                alt="Arbitrum logo"
+              ></Image>
               <span className="coin">Arbitrum</span>{" "}
               <div className="button-inner">
                 <Image
+                  alt="New tab"
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
@@ -283,10 +295,16 @@ export default function AddressFinder() {
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchBSC}>
-              <Image src={"/bsc.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/bsc.svg"}
+                width={20}
+                height={20}
+                alt="BSC logo"
+              ></Image>
               <span className="coin">BSC</span>{" "}
               <div className="button-inner">
                 <Image
+                  alt="New tab"
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
@@ -296,26 +314,38 @@ export default function AddressFinder() {
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchPolygon}>
-              <Image src={"/matic.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/matic.svg"}
+                width={20}
+                height={20}
+                alt="Polygon logo"
+              ></Image>
               <span className="coin">Polygon</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchAvalanche}>
-              <Image src={"/avax.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/avax.svg"}
+                width={20}
+                height={20}
+                alt="Avalanche logo"
+              ></Image>
               <span className="coin">Snowtrace</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
@@ -323,13 +353,19 @@ export default function AddressFinder() {
 
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchFantom}>
-              <Image src={"/fantom.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/fantom.svg"}
+                width={20}
+                height={20}
+                alt="Fantom logo"
+              ></Image>
               <span className="coin">Fantom</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
@@ -337,78 +373,114 @@ export default function AddressFinder() {
 
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchHeco}>
-              <Image src={"/heco.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/heco.svg"}
+                width={20}
+                height={20}
+                alt="Heco logo"
+              ></Image>
               <span className="coin">Heco</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchOptimism}>
-              <Image src={"/optimism.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/optimism.svg"}
+                width={20}
+                height={20}
+                alt="Optimism logo"
+              ></Image>
               <span className="coin">Optimism</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchCronos}>
-              <Image src={"/cronoss.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/cronoss.svg"}
+                width={20}
+                height={20}
+                alt="Cronos logo"
+              ></Image>
               <span className="coin">Cronos</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchCardano}>
-              <Image src={"/cardano.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/cardano.svg"}
+                width={20}
+                height={20}
+                alt="Cardano logo"
+              ></Image>
               <span className="coin">Cardano</span>
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchTron}>
-              <Image src={"/tron.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/tron.svg"}
+                width={20}
+                height={20}
+                alt="Tron logo"
+              ></Image>
               <span className="coin">TRON</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
           </div>
           <div className="col-6 col-sm-6 col-md-4 col-lg-3">
             <button className="btn purpl" onClick={SearchBitcoin}>
-              <Image src={"/bitcoin.svg"} width={20} height={20}></Image>
+              <Image
+                src={"/bitcoin.svg"}
+                width={20}
+                height={20}
+                alt="Bitcoin logo"
+              ></Image>
               <span className="coin">Bitcoin</span>{" "}
               <div className="button-inner">
                 <Image
                   src={"/newTabAddress.svg"}
                   width={20}
                   height={20}
+                  alt="New tab"
                 ></Image>
               </div>
             </button>
