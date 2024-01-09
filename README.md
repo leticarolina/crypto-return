@@ -12,7 +12,11 @@ To improve this, I am developing the TxID Network Finder. It compiles major netw
 
 ## Usage
 
-Coming soon...
+1.  Paste the 0x txID you wish to find out which network the transaction belongs to.
+
+2.  Click on the desired network to search given txIDand open it on a new window.
+
+The page also return a nav bar with the current price of certains cryptocurrencies.
 
 ## Author
 
