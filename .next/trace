@@ -1,0 +1,35 @@
+[
+  {
+    "name": "generate-buildid",
+    "duration": 311,
+    "timestamp": 897080941593,
+    "id": 4,
+    "parentId": 1,
+    "tags": {},
+    "startTime": 1704775284977,
+    "traceId": "691b4dcf14a49216"
+  },
+  {
+    "name": "load-custom-routes",
+    "duration": 318,
+    "timestamp": 897080942174,
+    "id": 5,
+    "parentId": 1,
+    "tags": {},
+    "startTime": 1704775284977,
+    "traceId": "691b4dcf14a49216"
+  },
+  {
+    "name": "next-build",
+    "duration": 163472,
+    "timestamp": 897080782623,
+    "id": 1,
+    "tags": {
+      "buildMode": "default",
+      "isTurboBuild": "false",
+      "version": "14.0.4"
+    },
+    "startTime": 1704775284818,
+    "traceId": "691b4dcf14a49216"
+  }
+]
