@@ -28,18 +28,18 @@ export default function Home() {
         console.error("error to fetch API");
       });
 
-    // const scrollingNav = document.querySelector("#coin");
+    const scrollingNav = document.querySelector("#coin");
+    scrollContent(scrollingNav);
     // setInterval(() => {
     //   scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
     // }, 30);
   }, []);
 
-  useEffect(() => {
-    const scrollingNav = document.querySelector("#coin");
+  function scrollContent(scrollingNav) {
     setInterval(() => {
       scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
-    }, 35);
-  }, []);
+    }, 30);
+  }
 
   function SearchEth() {
     console.log("eth");
