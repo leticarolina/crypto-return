@@ -28,10 +28,17 @@ export default function Home() {
         console.error("error to fetch API");
       });
 
+    // const scrollingNav = document.querySelector("#coin");
+    // setInterval(() => {
+    //   scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
+    // }, 30);
+  }, []);
+
+  useEffect(() => {
     const scrollingNav = document.querySelector("#coin");
     setInterval(() => {
       scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
-    }, 30);
+    }, 35);
   }, []);
 
   function SearchEth() {

@@ -12,7 +12,7 @@ body {
 
 #coin {
   padding-top: 8px;
-  width: auto;
+  /* width: auto; */
   color: #dadada;
   height: 60px;
   font-size: 16px;
@@ -175,6 +175,7 @@ footer {
   body {
     font-size: 14px;
   }
+
   .head {
     display: flex;
     flex-direction: column-reverse;
