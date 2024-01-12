@@ -23,19 +23,19 @@ export default function AddressFinder() {
         setCoins(d.data);
       });
 
-    const scrollingNav = document.querySelector("#coin");
-    scrollContent(scrollingNav);
+    // const scrollingNav = document.querySelector("#coin");
+    // scrollContent(scrollingNav);
     // const scrollingNav = document.querySelector("nav");
     // setInterval(() => {
     //   scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
     // }, 30);
   }, []);
 
-  function scrollContent(scrollingNav) {
-    setInterval(() => {
-      scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
-    }, 30);
-  }
+  // function scrollContent(scrollingNav) {
+  //   setInterval(() => {
+  //     scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
+  //   }, 30);
+  // }
 
   function SearchEth() {
     console.log("eth");
@@ -198,7 +198,7 @@ export default function AddressFinder() {
       </Head>
       {/* nav bar API Return */}
       <nav id="coin">
-        <ul>
+        <ul className="scrolling-list">
           {coins.map(({ id, name, priceUsd }) => (
             <li key={id}>
               <span>{name}</span>
