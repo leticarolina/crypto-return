@@ -12,7 +12,7 @@ body {
 
 #coin {
   padding-top: 8px;
-  width: 100%;
+  width: auto;
   color: #dadada;
   height: 60px;
   font-size: 16px;
@@ -33,11 +33,13 @@ body {
 
 .title {
   color: #08ffc8;
+
   font-family: "Play", sans-serif;
   font-size: 26px;
 }
 .link {
   color: #64fb3f;
+  color: whitesmoke;
   font-size: 18px;
   text-decoration: none;
 }
@@ -174,17 +176,20 @@ footer {
     font-size: 14px;
   }
   .head {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
 
     margin: 0px 10px 0px 0px;
   }
   .title {
-    font-size: 20px;
-    padding-bottom: 20px;
+    /* margin-bottom: 20; */
+    font-size: 24px;
+    /* padding-bottom: 20px; */
   }
   .link {
     font-size: 12px;
     float: right;
+    margin-bottom: 22px;
   }
   .instructions {
     justify-content: center;

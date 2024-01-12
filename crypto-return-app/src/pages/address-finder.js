@@ -204,7 +204,7 @@ export default function AddressFinder() {
       {/* Header */}
       <nav className="head">
         <h4 className="input-center title purp">Transaction Address Finder</h4>
-        <Link className="link greenish" href="/">
+        <Link className="link" href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

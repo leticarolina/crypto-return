@@ -31,6 +31,17 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff"></meta>
         {/* Document title
         <title>Blockchain Network Finder</title> */}
+        {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Titillium+Web:wght@200;400&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <body>
         <Main />
