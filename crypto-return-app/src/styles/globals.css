@@ -34,7 +34,7 @@ body {
 .scrolling-list {
   white-space: nowrap;
   padding-left: auto; /* to Ensure enough space for the scrolling content */
-  animation: scrollAnimation 100s linear infinite; /* Adjust the duration as needed */
+  animation: scrollAnimation 130s linear infinite; /* Adjust the duration as needed */
 }
 
 .spacer {

@@ -236,7 +236,7 @@ export default function Home() {
       <div className="tx">
         <div className="instructions">
           <p className="input-center step">01. </p>
-          <label htmlFor="txid">Paste 0x hash below</label>
+          <label htmlFor="txid">Paste 0x txID/hash below</label>
         </div>
         <div className="input-center">
           <input
@@ -257,7 +257,7 @@ export default function Home() {
         <div className="instructions">
           <p className="input-center step">02. </p>
           <p className="input-center">
-            Click on the desired network to search given txID
+            Click on the desired network to search txID
           </p>
         </div>
       </div>
