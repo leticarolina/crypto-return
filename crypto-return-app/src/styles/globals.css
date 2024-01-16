@@ -1,7 +1,7 @@
 /* Google Fonts */
 /*also add on _document.js inside <Head> <link google fonts> </Head> */
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Titillium+Web:wght@200;400&display=swap");
-
+/* 
 @keyframes scrollAnimation {
   0% {
     transform: translateX(100%);
@@ -9,7 +9,7 @@
   100% {
     transform: translateX(-1000%);
   }
-}
+} */
 
 html,
 body {
@@ -28,13 +28,8 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   margin-bottom: 15px;
-  /* white-space: nowrap; */
-}
-
-.scrolling-list {
   white-space: nowrap;
-  padding-left: auto; /* to Ensure enough space for the scrolling content */
-  animation: scrollAnimation 130s linear infinite; /* Adjust the duration as needed */
+  scroll-behavior: auto;
 }
 
 .spacer {
@@ -192,11 +187,16 @@ footer {
     font-size: 14px;
   }
 
+  #coin {
+    display: none;
+    /* scroll-behavior: smooth; */
+  }
+
   .head {
     display: flex;
     flex-direction: column-reverse;
 
-    margin: 0px 10px 0px 0px;
+    margin: 20px 10px 0px 0px;
   }
   .title {
     /* margin-bottom: 20; */

@@ -23,12 +23,12 @@ export default function AddressFinder() {
         setCoins(d.data);
       });
 
-    // const scrollingNav = document.querySelector("#coin");
+    const scrollingNav = document.querySelector("#coin");
     // scrollContent(scrollingNav);
     // const scrollingNav = document.querySelector("nav");
-    // setInterval(() => {
-    //   scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
-    // }, 30);
+    setInterval(() => {
+      scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
+    }, 30);
   }, []);
 
   // function scrollContent(scrollingNav) {

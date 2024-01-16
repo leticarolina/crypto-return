@@ -1,22 +1,36 @@
-# TxID Network Finder
+# Blockchain Finder
 
-TxID Network Finder is a personal project being developed to facilitate finding the relevant network of a given txID.
+TxID Network Finder is a personal project developed to both facilitate finding the relevant network of a given txID/address while also serving as a tool for applying my skills in React.js.
+
+### Link
+
+- Live Site URL: [https://www.blockchainfinder.site/](https://blockchainfinder.site/)
+
+### Built with
+
+- HTML5
+- Bootstrap
+- React.js
 
 ## Project Philosophy
 
-In my previous role as a transaction auditor, I had to review cryptocurrency deposits from different blockchain networks. Users would submit a form with details like transaction ID (txID), coin type, and network, but often, the network info provided was incorrect. This meant we couldn't find the transaction on the specified network.
+In my previous role as a transaction auditor, my responsibilities included reviewing cryptocurrency deposits originating from different blockchain networks. Users would submit a form with details like transaction ID (txID), coin type, and network, but often, the network info provided was incorrect. This meant we couldn't find the transaction on the specified network.
 
-Sometimes, with certain txIDs, we could make educated guesses about the network. But for txIDs starting with '0x' (which were the majority), finding the correct network required manually searching across multiple networks. This process took about 3-5 minutes for each incorrect network entry. Dealing with over 80 transactions a day, this inefficiency added up, taking almost an hour daily to find the right network.
+Sometimes, with certain txIDs, we could make guesses about the network. But for txIDs starting with '0x' (which were the majority), finding the correct network requires searching across multiple networks that support '0x'.
 
-To improve this, I am developing the TxID Network Finder. It compiles major networks associated with '0x' hashes. You paste the txID and select the network you want to search, making the process much quicker. The page will also help identify if a deposit address belongs to a certain network, streamlining the workflow significantly.
+To address this issue, I developed a unique application which is a network finder. When dealing with a transaction ID (txID) starting with 0x and you're unsure which network it belongs to, my page has compiled information on some of the most widely used networks to make this search much smoother.
+Additionally, there's a second page to check if a deposit address is supported by a specific blockchain explorer.
+
+The page features a desktop navigation bar displaying the current prices of different cryptocurrencies. I used the CoinCap API to get these values.
 
 ## Usage
 
-1.  Paste the 0x txID you wish to find out which network the transaction belongs to.
+Simply paste the txID or address, click on your preferred network, and a new browser window will open with all the details.
 
-2.  Click on the desired network to search given txIDand open it on a new window.
+Step by step:
 
-The page also return a nav bar with the current price of certains cryptocurrencies.
+1.  Paste the 0x txID or address you want to identify the network for.
+2.  Click on the desired network to search for the given txID or address, and the browser will open the result in a new window.
 
 ## Author
 

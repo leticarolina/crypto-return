@@ -28,11 +28,11 @@ export default function Home() {
         console.error("error to fetch API");
       });
 
-    // const scrollingNav = document.querySelector("#coin");
+    const scrollingNav = document.querySelector("#coin");
     // scrollContent(scrollingNav);
-    // setInterval(() => {
-    //   scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
-    // }, 30);
+    setInterval(() => {
+      scrollingNav.scrollLeft = scrollingNav.scrollLeft + 0.7;
+    }, 30);
   }, []);
 
   // function scrollContent(scrollingNav) {
